@@ -11,7 +11,7 @@ namespace DatingApp.API.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
+                    ID = table.Column<int>(nullable: false),
                     Username = table.Column<string>(nullable: true),
                     PasswordHash = table.Column<byte[]>(nullable: true),
                     PassworSalt = table.Column<byte[]>(nullable: true)
