@@ -65,7 +65,7 @@ namespace DatingApp.API.Controllers
             };
 
             //This will create a key and a signature. These will allow the application to validate the user
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings: Tokens").Value));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Tokens").Value));
             
             //This takes the key created above and hashes it.
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
