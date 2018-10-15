@@ -9,7 +9,7 @@ export class AuthService {
 baseUrl = 'http://localhost:5000/api/auth/';
 constructor(private http: HttpClient) { }
 
-login(model: any){
+login(model: any) {
   return this.http.post(this.baseUrl + 'login', model)
   .pipe(
     map((response: any) => {
@@ -21,7 +21,7 @@ login(model: any){
   );
 }
 
-register(model: any){
+register(model: any) {
   return this.http.post(this.baseUrl + 'register', model);
 }
 
