@@ -18,7 +18,8 @@
 
     <div *ngIf="loggedIn()" class="dropdown">
         <a class="dropdown-toggle text-light">
-          Welcome
+          Welcome {{authService.decodedToken.unique_name | titlecase}} 
+          <!-- this error does not stop the service from working -->
         </a>
       
         <div class="dropdown-menu" >
